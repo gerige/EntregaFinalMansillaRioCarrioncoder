@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Lista de Materias</h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+
+    <h1>Materias</h1>
+    
+    <p>Nombre: <i>{{ Materia.nombreMateria }}</i></p>
+    <p>Obligatoria: <i>{{ Materia.obligatoria }}</i></p>
+    
+    
+        <a href="{% url 'MateriaList' %}">Regresar</a>
+    </p>
+    
+    {% endblock %}

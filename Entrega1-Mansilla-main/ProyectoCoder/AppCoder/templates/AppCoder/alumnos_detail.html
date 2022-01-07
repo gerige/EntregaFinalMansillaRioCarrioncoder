@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Detalle del Alumno</h1>
+    {% endblock %}
+
+    
+    {% block contenidoDinamico %}
+
+    <p>Codigo de Alumno: <i>{{alumno.id}}</i> </p>
+    <p>Nombre: <i>{{alumno.nombreAlumno}}</i></p>
+    <p>Apellido: <i>{{alumno.apellidoAlumno}}</i></p>
+    <p>Edad: <i>{{alumno.edadAlumno}}</i></p>
+    <br>
+    <p><a href="{% url 'ListaAlumnos' %}">Regresar</a></p>
+
+    {% endblock %}

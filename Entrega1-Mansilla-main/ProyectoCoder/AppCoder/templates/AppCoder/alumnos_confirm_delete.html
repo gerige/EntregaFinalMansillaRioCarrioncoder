@@ -1,0 +1,15 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Eliminar Alumno</h1>
+    {% endblock %}
+
+    
+    {% block contenidoDinamico %}
+        <form method="post"> {% csrf_token %}
+            Desea eliminar al alumno? ---> "{{ object }}"
+            <input type="submit" value="Confirmar">
+        </form>
+    {% endblock %}

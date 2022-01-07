@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Lista de Profesores</h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+
+    <h1>Profesores </h1>
+    <ul>
+        {% for Profesor in object_list %}
+
+            <li>
+                <p>NOMBRE: {{ Profesor.nombreProf }} </p>
+                <p> 
+                    <a href="{% url 'ProfesorDetail' Profesor.id %}">Ver</a> | 
+                    <a href="{% url 'ProfesorEdit' Profesor.id %}">Editar</a> | 
+                    <a href="{% url 'ProfesorDelete' Profesor.id %}">Borrar</a> 
+                
+                </p> 
+            </li>
+
+        {% endfor %}
+
+        <a href="{% url 'ProfesorNew'  %}">Nuevo</a> | 
+    {% endblock %}

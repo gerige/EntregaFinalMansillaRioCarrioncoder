@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Borrar Profe :( </h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+
+    <h1></h1>
+    
+  
+    <form method="post">{% csrf_token %}
+        ¿Estás seguro que deseas borrar el profesor "{{ object }}"?
+        <input type="submit" value="Borrar" />
+
+    
+    {% endblock %}

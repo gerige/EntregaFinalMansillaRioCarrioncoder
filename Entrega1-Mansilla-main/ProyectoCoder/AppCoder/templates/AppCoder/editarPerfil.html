@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoDinamico %}
+
+    <h1>Edición de Perfil</h1>
+    <h3>Usuario: {{usuario}} </h3>
+    <br>
+    
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+
+        <input type="submit", value="Enviar">
+    </form>
+
+{% endblock %}

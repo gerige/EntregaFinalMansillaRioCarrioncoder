@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Agregar Avatar</h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+    <h3>Cargar Avatar</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ miFormulario.as_p }}
+
+        <input type="submit" value="Actualizar">
+
+    </form>
+
+    {% endblock %}

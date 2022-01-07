@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Lista completa de alumnos</h1>
+    {% endblock %}
+
+    
+    {% block contenidoDinamico %}
+
+    <button><a href="{% url 'New'  %}">Agregar Alumno</a></button>
+    <p>Lista completa de alumnos</p> <br>
+    <ul>
+        {% for alumno in object_list %}
+            <p>
+                <li>Codigo de Alumno: {{alumno.id}}</li>
+                <li>Apellido: {{alumno.apellidoAlumno}}</li>
+            </p>
+            <p>
+                <a href="{% url 'Detail' alumno.id %}">Ver mas</a>
+                <a href="{% url 'Edit' alumno.id %}">Editar</a>
+                <a href="{% url 'Delete' alumno.id %}">Borrar</a>
+            </p>
+            <br>
+
+        {% endfor %}
+
+    </ul>
+
+    {% endblock %}

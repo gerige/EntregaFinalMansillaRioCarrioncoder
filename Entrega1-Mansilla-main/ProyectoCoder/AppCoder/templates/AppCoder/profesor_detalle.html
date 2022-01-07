@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Lista de Profesores</h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+
+    <h1>Profesores</h1>
+    
+    <p>Nombre: <i>{{ Profesor.nombreProf }}</i></p>
+    <p>Apellido: <i>{{ Profesor.apellidoProf }}</i></p>
+    <p>Anios Ejerciendo: <i>{{ Profesor.aniosEjerciendo}}</i></p>
+    
+        <a href="{% url 'ProfesorList' %}">Regresar</a>
+    </p>
+    
+    {% endblock %}

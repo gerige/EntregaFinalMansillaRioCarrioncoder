@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+    {% block contenidoDinamico2 %}
+        <h1 class="mb-1">Lista de Profesoresñ</h1>
+    {% endblock %}
+
+
+    {% block contenidoDinamico %}
+
+    <h1>Profesores </h1>
+    
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Enviar" />
+    </form>
+
+    
+    {% endblock %}
